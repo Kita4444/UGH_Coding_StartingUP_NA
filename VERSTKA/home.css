@@ -1,0 +1,558 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #161718;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000; /* Increase the z-index */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all 0.50s ease;
+  height: 30px;
+  background-color: #161718;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav .logo i {
+  color: #fff;
+  font-size: 28px;
+  margin-right: 3px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+  color: #fff;
+}
+
+.route-selection {
+  background-color: #232323;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  position: relative; /* Add this */
+  z-index: 1; /* Add this */
+  margin-top: 100px;
+}
+
+
+.route-selection .location {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-selection label {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.route-selection input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.route-selection button {
+  padding: 10px 20px;
+  background-color: #29fd53e3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.route-selection button:hover {
+  background-color: #29fd53e3;
+  animation: ease-out(0.3s);
+}
+
+.car-choices {
+  background-color: #232323;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  color: #fff;
+}
+
+.car-choices h2 {
+  color: #29a8fde3;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.navbar a 
+{
+    display: inline-block;
+    position: relative;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-left: 45px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.desktop-only a
+{
+  margin-top: -0px;
+}
+  
+.navbar a:after 
+{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #29a8fdc5;
+    transition: width 0.2s ease;
+}
+  
+.navbar a:hover:after 
+{
+    width: 100%;
+}
+  
+.main-navbar
+{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.user1
+{
+  display: none;
+}
+
+.main-navbar a
+{
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.desktop-only
+{
+  display: none;
+  appearance: none;
+}
+.user
+{
+  display: flex;
+  align-items: center;
+}
+
+.user i 
+{
+  color: var(--main-color);
+  font-size: 28px;
+  margin-right: 7px;
+}
+
+.main-navbar a:hover
+{
+  color: var(--main-color);
+}
+
+#menu-icon
+{
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+.homepageimage
+{
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-bottom: 0;
+}
+.phonehomepageimage
+{
+  display: none;
+}
+
+.account-img
+{
+   border: 1px solid #29a8fde3;
+   border-radius: 50%;
+   width: 35px;
+   height: 35px;
+   margin-bottom: 0px;
+   margin-top: 5px;
+}
+
+.image-section
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Home start */
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control the overlay opacity */
+  color: #fff; /* Text color */
+  padding-left: 12%;
+  padding-bottom: 15%;
+}
+
+.overlay h1, .overlay p {
+  font-size: 24px;
+  margin: 10px 0;
+
+}
+
+.overlay .sign_upindex {
+  padding: 10px 10px;
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.main-text
+{
+  align-items: baseline;
+  align-content: baseline;
+  text-align: right;
+  display: flex;
+}
+
+.main-text1
+{
+  display: none;
+}
+
+span
+{
+  margin-left: 4px;
+  text-decoration: wavy, solid;
+  color: #2699ec;
+  
+}
+
+.overlay h1, h2
+{
+  text-align: left;
+  font-size: 36px;
+}
+
+.overlay .paragraph1
+{
+  width: 50%;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.overlay .buttonsstart
+{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 25px;
+}
+
+.buttonsstart a img
+{
+  width: 150%;
+  height: 150%;
+}
+
+.buttonsstart a
+{
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 20px 20px;
+}
+
+.buttonsstart .sign_upindex
+{
+  margin-bottom: 7px;
+  border-radius: 10px;
+  margin-right: 20px;
+  padding: 20px 20px;
+  font-size: 20px;
+}
+
+/* Contact field */
+
+.contactbackground
+{
+  width: 100%;
+  display: block;
+  height: fit-content;
+}
+
+.contact-container {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-overlay 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.682); /* Adjust the alpha value to control the overlay opacity */
+  color: #fff; /* Text color */
+}
+
+
+
+
+/* switcher light/dark themes */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* end switcher dark theme */
+
+/* FOOTER DESIGN  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+
+.social-links a.telegram-link:hover 
+{
+  background-color: #1c86c9; 
+  color: #ffffff;
+}
+
+.social-links a.instagram-link:hover 
+{
+  background-color: #bc2a8d; 
+  color: #fbe1c2;
+}
+
+.social-links a.twitter-link:hover 
+{
+  background-color: #1c86c9; 
+  color: #ffffff;
+}
+
+.social-links a.discord-link:hover 
+{
+  background-color: #7289da; 
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
