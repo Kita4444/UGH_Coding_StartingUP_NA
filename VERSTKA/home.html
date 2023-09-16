@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1, user-scalable=no">
+
+  <title>Flashy</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <link href="https: //cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel ="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="header.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;6008display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyCVx03aHvUzBl5EvXwqm2MrdPlJ4T9Qqic", v: "beta"});</script>
+  <script type="module" src="home.js"></script>
+</head>
+
+<body>
+  <header>
+      <nav>
+          <a href="#" class="logo"><i class="ri-home-heart-fill"></i><span>UBERLAND</span></a>
+          <ul>
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#envi-uber">Envi-Uber</a></li>
+              <li><a href="#cars">Cars</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div id="map"></div>
+  <script>
+    function initMap() { 
+      let uluru = {lat: -25.344, lng: 131.036};
+      let map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 4, center: uluru} 
+      );
+      let marker = new google.maps.Marker({position: uluru, map: map})
+    }
+  </script>
+  
+  <!-- prettier-ignore -->
+  
+  <section class="route-selection">
+      <div class="location">
+          <label for="start">Start Location:</label>
+          <input type="text" id="start" placeholder="Choose start location">
+      </div>
+      <div class="location">
+          <label for="end">End Location:</label>
+          <input type="text" id="end" placeholder="Choose end location">
+      </div>
+      <button id="calculate-route">Calculate Route</button>
+  </section>
+
+  <section class="car-choices">
+      <h2>Car Choices and Prices:</h2>
+      <!-- Car choices and prices will be dynamically added here -->
+  </section>
+
+  
+  
+</body>
+</html>
